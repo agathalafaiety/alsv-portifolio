@@ -1,10 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="logo-title">
-  <title id="logo-title">Monograma AL de Agatha Lafaiety</title>
-  <rect width="64" height="64" rx="14" fill="#3b231e"/>
-  <path d="M8.5 39.5C15.5 52 35 57 49 46.5C60 38.2 58.5 19.5 45 10.5" fill="none" stroke="#dfd3a1" stroke-width="1.5" stroke-linecap="round" opacity=".42"/>
-  <g fill="none" stroke="#f4efdc" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M13.5 44 24.5 18 35.5 44M18 34h13"/>
-    <path d="M40 18v26h11"/>
-  </g>
-  <circle cx="51" cy="17" r="3" fill="#b76f73"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Monograma AL de Agatha Lafaiety">
+  <rect width="512" height="512" rx="108" fill="#3b231e"/>
+  <path fill="#f4efdc" fill-rule="evenodd" d="M64 368 158 144h58l94 224h-61l-20-52h-86l-20 52H64Zm98-102h48l-24-63-24 63Z"/>
+  <path fill="#f4efdc" d="M289 144h56v171h75v53H289V144Z"/>
+  <circle cx="447" cy="341" r="27" fill="#dfd3a1"/>
 </svg>

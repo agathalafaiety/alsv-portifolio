@@ -2,6 +2,6 @@
 
 ## Portfólio
 
-- Em 2026-09-09, Agatha aprovou a identidade dos ícones do portfólio baseada no monograma linear “AL.”: fundo marrom profundo (`#3b231e`), traços creme/amarelo (`#f4efdc` e `#dfd3a1`), órbita discreta e ponto rosa (`#b76f73`) como assinatura.
-- A arte social deve permanecer plana e editorial, reutilizando círculos e linhas orbitais finas do portfólio, sem gradientes ou sombras.
+- Em 2026-09-09, Agatha preferiu a versão preenchida do monograma “AL.” para os ícones do portfólio: fundo marrom profundo (`#3b231e`), letras creme (`#f4efdc`) e ponto amarelo (`#dfd3a1`).
+- A arte social deve permanecer clara, plana e editorial, reutilizando círculos e linhas orbitais finas do portfólio, sem gradientes ou sombras.
 - Em 2026-09-09, a publicação do portfólio no ChatGPT Sites foi retirada do acesso público e mantida somente para a proprietária, de forma reversível. O trabalho futuro seguirá via OpenClaw no site existente, já hospedado e com DNS configurado.
