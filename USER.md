@@ -30,6 +30,10 @@ Use one directive per entry:
 
 - Never publish content, send messages, reply to comments, or modify external profiles without Agatha's explicit approval.
 
+<!-- observed: 2026-09-09 | status: active -->
+
+- Always version local memories and all authored workspace files in Git; exclude only dependencies, build artifacts, caches, temporary files, generated outputs, and local credentials.
+
 ## Related
 
 - [Agent workspace](/concepts/agent-workspace)
