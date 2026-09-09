@@ -4,7 +4,7 @@ Site profissional de Agatha Lafaiety, Engenheira de Software e IA focada na inte
 
 ## Prévia local
 
-O projeto roda em `http://localhost:4317`. Essa URL é privada e acessível somente no computador em que o servidor está sendo executado. O site ainda não está publicado, não está conectado ao domínio e não aparece no Google.
+O projeto roda em `http://localhost:4317`. Essa URL é privada e acessível somente no computador em que o servidor está sendo executado. A versão pública está disponível em `https://agathalafaiety.com.br`.
 
 ## Identidade visual
 
@@ -33,7 +33,8 @@ O projeto roda em `http://localhost:4317`. Essa URL é privada e acessível some
 - Vite
 - CSS responsivo
 - Lucide Icons
-- OpenAI Sites para estrutura e hospedagem futura
+- OpenAI Sites para a estrutura do projeto
+- OpenClaw para coordenação da implantação no servidor oficial
 
 ## Estrutura principal
 
@@ -61,8 +62,12 @@ features/
     config.ts        # rotas, links e caminhos de arquivos públicos
 public/
   company-logos/     # marcas usadas na trajetória profissional
-  favicon.svg
-  og.png
+  favicon.svg        # favicon vetorial
+  apple-touch-icon.png
+  icon-192.png
+  icon-512.png
+  og.png             # card de compartilhamento social
+  site.webmanifest
   talks/             # materiais de palestras
 ```
 
@@ -106,13 +111,13 @@ O primeiro material disponível é `public/talks/inteligencia-artificial-dos-fun
 
 ## Acessibilidade e SEO
 
-O projeto usa HTML semântico, link para pular ao conteúdo, foco visível, contraste adequado, menu móvel acessível por teclado e respeita a preferência do sistema por movimento reduzido. Enquanto estiver em revisão local, os metadados instruem mecanismos de busca a não indexar o site.
+O projeto usa HTML semântico, link para pular ao conteúdo, foco visível, contraste adequado, menu móvel acessível por teclado e respeita a preferência do sistema por movimento reduzido. A versão pública possui endereço canônico, metadados Open Graph e X/Twitter, card social e indexação habilitada.
 
 ## Publicação e domínio
 
-A publicação será feita somente depois da aprovação da versão local. O domínio planejado é `agathalafaiety.com.br`, mas ele ainda não está conectado. Quando o projeto for publicado, será necessário configurar DNS, endereço canônico, indexação e ferramentas de análise.
+O código está no repositório `https://github.com/agathalafaiety/alsv.git`, branch `main`, dentro de `projects/portfolio`. A produção é mantida em `/srv/sites/agatha-lafaiety-portfolio`, com releases imutáveis e troca atômica do apontamento `current` coordenadas pelo Falcao, responsável pela infraestrutura compartilhada.
 
-Nome planejado do repositório: `agatha-lafaiety-portfolio`.
+O domínio oficial é `https://agathalafaiety.com.br`. Alterações públicas devem ser validadas localmente, versionadas no Git e implantadas pelo fluxo do OpenClaw, sem mudanças diretas em DNS, TLS, Nginx ou serviços compartilhados.
 
 ## Autora
 
