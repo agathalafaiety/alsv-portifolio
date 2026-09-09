@@ -34,6 +34,10 @@ Use one directive per entry:
 
 - Always version local memories and all authored workspace files in Git; exclude only dependencies, build artifacts, caches, temporary files, generated outputs, and local credentials.
 
+<!-- observed: 2026-09-09 | status: active -->
+
+- Prefer OpenClaw and Agatha's existing DNS-configured hosted site for future portfolio work; do not use ChatGPT Sites unless Agatha explicitly requests it again.
+
 ## Related
 
 - [Agent workspace](/concepts/agent-workspace)
