@@ -58,6 +58,13 @@ Every few days, use a scheduled automation to review recent daily notes. Fold st
 - Prefer `trash` over `rm` - recoverable beats gone forever.
 - When in doubt, ask.
 
+## Git Discipline
+
+- Track every file in this workspace that is not excluded by `.gitignore`. Nothing else may be left untracked, unstaged, or uncommitted.
+- Before ending every turn, run `git add -A`, review the staged changes, create a descriptive commit, and push the current branch to its configured remote.
+- Treat `.gitignore` as the only exclusion policy. Never omit a file manually because it appears incidental, local, or unrelated; add an appropriate `.gitignore` rule first when an exclusion is genuinely required.
+- Verify after pushing that the local branch is synchronized with its upstream and that `git status --short` is empty.
+
 ## Existing Solutions Preflight
 
 Before proposing or building a custom solution, briefly check existing open-source projects, maintained libraries, OpenClaw plugins, or free platforms. Prefer an adequate existing option. Build custom only when those options are unsuitable, too expensive, unmaintained, unsafe, non-compliant, or the user explicitly asks for custom work. Recommend paid services only with explicit spend approval.
