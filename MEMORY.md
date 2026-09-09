@@ -1,6 +1,5 @@
-# MEMORY.md - Durable Facts and Decisions
+# Memória de longo prazo
 
-## Portfolio
+## Portfólio
 
-- The approved visual system for Agatha Lafaiety's portfolio icons uses the `AL.` monogram: coffee brown (`#3b231e`) background, cream (`#f4efdc`) lettering, and a champagne yellow (`#dfd3a1`) period.
-- Social preview artwork should remain flat and editorial, reusing the portfolio's circles and thin orbital lines without gradients or shadows.
+- Em 2026-09-09, Agatha aprovou a identidade dos ícones do portfólio baseada no monograma linear “AL.”: fundo marrom profundo (`#3b231e`), traços creme/amarelo (`#f4efdc` e `#dfd3a1`), órbita discreta e ponto rosa (`#b76f73`) como assinatura.

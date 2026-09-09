@@ -8,9 +8,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(
-    'https://agathalafaiety.com.br',
-  ),
+  metadataBase: new URL('https://agathalafaiety.com.br'),
   applicationName: 'Agatha Lafaiety',
   title: 'Agatha Lafaiety',
   description:
@@ -49,8 +47,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: '/og.png?v=3',
-        width: 1672,
-        height: 941,
+        width: 1200,
+        height: 630,
         alt: 'Agatha Lafaiety — Engenheira de Software e IA',
       },
     ],
