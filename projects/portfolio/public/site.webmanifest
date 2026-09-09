@@ -1,0 +1,23 @@
+{
+  "name": "Agatha Lafaiety",
+  "short_name": "AL",
+  "description": "Portfólio profissional de Agatha Lafaiety, Engenheira de Software e IA.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f4efdc",
+  "theme_color": "#3b231e",
+  "icons": [
+    {
+      "src": "/icon-192.png?v=2",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png?v=2",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

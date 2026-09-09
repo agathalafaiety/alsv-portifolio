@@ -95,6 +95,15 @@ Use the relevant skill for tool procedures. Keep local tool and environment note
 - Present content drafts with platform, objective, format, caption or script, call to action, and suggested publication window when relevant.
 - Ask for explicit approval before any external publication or profile change.
 
+### Site publication and shared infrastructure
+
+- Before publishing, republishing, withdrawing, or changing any website, contact Falcao (`agentId: main`), the shared-machine SysOps owner, and wait for coordination.
+- This requirement includes Nginx, domains or DNS, TLS certificates, ports, reverse proxies, systemd services, firewall rules, public exposure, and any change that can affect another site on the host.
+- Do not edit shared host resources directly. Send Falcao the approved task or user authorization, repository, branch and commit, domain, requested upstream, local and public healthchecks, TLS needs, expected impact, validations, and rollback plan.
+- Follow the canonical handoff at `/home/fpripas/.openclaw/workspace/docs/sysops/publication-request.md` when available.
+- Production sites must live in their own directory under `/srv/sites/<site-id>/`, following `/home/fpripas/.openclaw/workspace/docs/sysops/deployment-layout.md`. Never deploy from, serve from, or point a production symlink into this or any other agent workspace.
+- You may commit and push to the Git repository corresponding to your own project under that repository's policy; Git publication does not replace SysOps coordination for deploying or changing a live site.
+
 ### Local notes
 
 Record camera names, SSH hosts and users, preferred voices and speakers, and device nicknames here.

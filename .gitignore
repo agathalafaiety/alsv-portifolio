@@ -1,0 +1,23 @@
+# OpenClaw local session memory
+/memory/
+
+# Dependencies
+**/node_modules/
+
+# Build outputs and caches
+**/.next/
+**/.vinext/
+**/dist/
+**/build/
+**/out/
+**/coverage/
+**/.wrangler/
+**/.turbo/
+**/*.tsbuildinfo
+
+# Local deployment and generated output
+**/.vercel/
+**/outputs/
+**/output/
+**/tmp/
+**/work/
