@@ -20,11 +20,11 @@ export const metadata: Metadata = {
   category: 'technology',
   icons: {
     icon: [
-      { url: '/favicon.svg?v=2', type: 'image/svg+xml' },
-      { url: '/icon-192.png?v=2', sizes: '192x192', type: 'image/png' },
+      { url: '/favicon.svg?v=3', type: 'image/svg+xml' },
+      { url: '/icon-192.png?v=3', sizes: '192x192', type: 'image/png' },
     ],
-    shortcut: '/favicon.svg?v=2',
-    apple: [{ url: '/apple-touch-icon.png?v=2', sizes: '180x180' }],
+    shortcut: '/favicon.svg?v=3',
+    apple: [{ url: '/apple-touch-icon.png?v=3', sizes: '180x180' }],
   },
   manifest: '/site.webmanifest',
   formatDetection: { telephone: false, address: false, email: false },
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
       'Engenheira de Software e IA focada na intersecção entre Backend, Cloud e Inteligência Artificial.',
     images: [
       {
-        url: '/og.png?v=2',
+        url: '/og.png?v=3',
         width: 1672,
         height: 941,
         alt: 'Agatha Lafaiety — Engenheira de Software e IA',
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Agatha Lafaiety | Engenheira de Software e IA',
     description: 'Backend, Cloud e Inteligência Artificial.',
-    images: ['/og.png?v=2'],
+    images: ['/og.png?v=3'],
   },
 };
 
