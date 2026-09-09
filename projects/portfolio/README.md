@@ -22,7 +22,6 @@ O projeto roda em `http://localhost:4317`. Essa URL é privada e acessível some
 - Área de palestras preparada para crescer
 - Material em PDF da palestra “Inteligência Artificial: dos fundamentos à prática”
 - Links para LinkedIn, GitHub, Medium, Instagram e YouTube
-- Currículos públicos em português e inglês, sem telefone
 - Alternância entre português e inglês
 - Navegação responsiva, animações suaves e suporte a redução de movimento
 
@@ -64,7 +63,6 @@ public/
   company-logos/     # marcas usadas na trajetória profissional
   favicon.svg
   og.png
-  resumes/           # currículos públicos
   talks/             # materiais de palestras
 ```
 
@@ -100,14 +98,7 @@ npm run build
 
 ## Como atualizar o conteúdo
 
-Os textos, experiências, ferramentas, artigos e redes sociais ficam centralizados em `content/portfolio.ts`. Os arquivos públicos podem ser substituídos nas pastas `public/resumes` e `public/talks`, mantendo os nomes ou atualizando os links em `app/page.tsx`.
-
-## Currículos
-
-- `public/resumes/Agatha_Lafaiety_Resume_PT.pdf`
-- `public/resumes/Agatha_Lafaiety_Resume_EN.pdf`
-
-As versões públicas foram preparadas sem número de telefone.
+Os textos, experiências, ferramentas, artigos e redes sociais ficam centralizados em `content/portfolio.ts`. Os materiais públicos de palestras podem ser substituídos em `public/talks`, mantendo os nomes ou atualizando os caminhos em `features/portfolio/config.ts`.
 
 ## Palestras
 

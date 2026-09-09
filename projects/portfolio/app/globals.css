@@ -477,23 +477,6 @@ button:focus-visible {
   flex-wrap: wrap;
   gap: 0.75rem;
 }
-.resume-links {
-  margin-top: 1rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.7rem 1.4rem;
-}
-.resume-links a {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  font-size: 0.73rem;
-  font-weight: 700;
-  text-decoration: none;
-}
-.resume-links a:hover {
-  color: var(--yellow-strong);
-}
 .hero-socials {
   margin-top: 2.5rem;
   display: flex;
@@ -1398,8 +1381,7 @@ footer p,
   .social-grid a:last-child:nth-child(odd) {
     grid-column: auto;
   }
-  .hero-socials a,
-  .resume-links a {
+  .hero-socials a {
     min-height: 2.5rem;
   }
   .contact-section {
@@ -1440,10 +1422,6 @@ footer p,
   .talk-actions a,
   .contact-actions a {
     width: 100%;
-  }
-  .resume-links {
-    display: grid;
-    grid-template-columns: 1fr;
   }
   .hero-socials {
     gap: 0.9rem 1.2rem;

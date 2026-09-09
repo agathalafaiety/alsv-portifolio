@@ -1,10 +1,6 @@
-import { ArrowDown, ArrowUpRight, Download, Mail } from 'lucide-react';
+import { ArrowDown, ArrowUpRight, Mail } from 'lucide-react';
 import { copy, expertise } from '@/content/portfolio';
-import {
-  CONTACT,
-  PUBLIC_ASSETS,
-  SOCIAL_LINKS,
-} from '@/features/portfolio/config';
+import { CONTACT, SOCIAL_LINKS } from '@/features/portfolio/config';
 import type { Locale } from '@/features/portfolio/domain/types';
 
 export function HeroSection({ locale }: { locale: Locale }) {
@@ -51,27 +47,6 @@ export function HeroSection({ locale }: { locale: Locale }) {
                 <ArrowUpRight size={14} />
               </a>
             ))}
-          </div>
-          <div
-            className="resume-links"
-            aria-label={locale === 'pt' ? 'Currículos' : 'Resumes'}
-          >
-            <a
-              href={PUBLIC_ASSETS.resumePt}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Download size={16} />
-              {t.resumePt}
-            </a>
-            <a
-              href={PUBLIC_ASSETS.resumeEn}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Download size={16} />
-              {t.resumeEn}
-            </a>
           </div>
         </div>
 

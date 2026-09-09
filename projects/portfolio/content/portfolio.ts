@@ -63,8 +63,6 @@ export const copy = {
     contactBody:
       'Aberta a novas oportunidades, parcerias, colaborações ou apenas uma boa conversa sobre tecnologia.',
     linkedin: 'Conecte-se comigo',
-    resumePt: 'Currículo · PT',
-    resumeEn: 'Resume · EN',
     current: 'Atual',
     footer: 'São Paulo, Brasil',
   },
@@ -122,8 +120,6 @@ export const copy = {
     contactBody:
       'Open to new opportunities, partnerships, collaborations or simply a good conversation about technology.',
     linkedin: 'Connect with me',
-    resumePt: 'Resume · PT',
-    resumeEn: 'Resume · EN',
     current: 'Present',
     footer: 'São Paulo, Brazil',
   },

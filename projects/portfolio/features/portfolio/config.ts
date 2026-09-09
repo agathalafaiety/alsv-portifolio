@@ -33,8 +33,6 @@ export const SOCIAL_LINKS = [
 ] as const satisfies readonly SocialLink[];
 
 export const PUBLIC_ASSETS = {
-  resumePt: '/resumes/Agatha_Lafaiety_Resume_PT.pdf',
-  resumeEn: '/resumes/Agatha_Lafaiety_Resume_EN.pdf',
   talkMaterial: '/talks/material-ia-2026.pdf',
 } as const;
 

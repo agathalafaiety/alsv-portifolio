@@ -28,7 +28,7 @@ Armazena textos, experiências, ferramentas, artigos e demais informações edit
 
 ### Configuração (`features/portfolio/config.ts`)
 
-Centraliza URLs externas, caminhos de currículos e materiais, e a definição das seções navegáveis.
+Centraliza URLs externas, caminhos de materiais públicos e a definição das seções navegáveis.
 
 ## Direção das dependências
 
