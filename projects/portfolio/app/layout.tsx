@@ -1,6 +1,12 @@
 import type { Metadata, Viewport } from 'next';
 import { Montserrat } from 'next/font/google';
+import { PortfolioAnalytics } from '@/components/analytics/portfolio-analytics';
+import { EXTERNAL_LINKS } from '@/features/portfolio/config';
 import './globals.css';
+
+const SITE_URL = 'https://agathalafaiety.com.br';
+const SITE_DESCRIPTION =
+  'Engenheira de Software e IA focada na intersecção entre Backend, Cloud e Inteligência Artificial.';
 
 const montserrat = Montserrat({
   variable: '--font-montserrat',
@@ -8,11 +14,10 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://agathalafaiety.com.br'),
+  metadataBase: new URL(SITE_URL),
   applicationName: 'Agatha Lafaiety',
   title: 'Agatha Lafaiety',
-  description:
-    'Engenheira de Software e IA focada na intersecção entre Backend, Cloud e Inteligência Artificial.',
+  description: SITE_DESCRIPTION,
   authors: [{ name: 'Agatha Lafaiety' }],
   creator: 'Agatha Lafaiety',
   category: 'technology',
@@ -62,6 +67,35 @@ export const metadata: Metadata = {
   },
 };
 
+const profilePageStructuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfilePage',
+  '@id': `${SITE_URL}/#profile-page`,
+  url: `${SITE_URL}/`,
+  name: 'Agatha Lafaiety | Engenheira de Software e IA',
+  description: SITE_DESCRIPTION,
+  inLanguage: ['pt-BR', 'en'],
+  mainEntity: {
+    '@type': 'Person',
+    '@id': `${SITE_URL}/#agatha-lafaiety`,
+    name: 'Agatha Lafaiety',
+    alternateName: '@agathalafaiety',
+    url: `${SITE_URL}/`,
+    jobTitle: 'Engenheira de Software e Inteligência Artificial',
+    description: SITE_DESCRIPTION,
+    sameAs: Object.values(EXTERNAL_LINKS),
+    knowsAbout: [
+      'Engenharia de Software',
+      'Inteligência Artificial',
+      'Backend',
+      'Cloud Computing',
+      'Large Language Models',
+      'Retrieval-Augmented Generation',
+      'MLOps',
+    ],
+  },
+};
+
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
@@ -76,7 +110,21 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="pt-BR">
-      <body className={`${montserrat.variable} antialiased`}>{children}</body>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(profilePageStructuredData).replace(
+              /</g,
+              '\\u003c',
+            ),
+          }}
+        />
+      </head>
+      <body className={`${montserrat.variable} antialiased`}>
+        {children}
+        <PortfolioAnalytics />
+      </body>
     </html>
   );
 }
