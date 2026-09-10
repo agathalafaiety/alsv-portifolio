@@ -38,6 +38,10 @@ Use one directive per entry:
 
 - Prefer OpenClaw and Agatha's existing DNS-configured hosted site for future portfolio work; do not use ChatGPT Sites unless Agatha explicitly requests it again.
 
+<!-- observed: 2026-09-09 | status: active -->
+
+- Never show an automatic analytics or metrics prompt when visitors enter the portfolio; keep measurement opt-in available only through a discreet privacy control.
+
 ## Related
 
 - [Agent workspace](/concepts/agent-workspace)

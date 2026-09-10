@@ -176,14 +176,16 @@ export function PortfolioAnalytics() {
 
   return (
     <>
-      {preferencesOpen || consent === null ? (
+      {preferencesOpen ? (
         <dialog
           open
           className="metrics-consent"
           aria-labelledby="metrics-consent-title"
         >
           <div>
-            <strong id="metrics-consent-title">Métricas de experiência</strong>
+            <strong id="metrics-consent-title">
+              Preferências de privacidade
+            </strong>
             <p>
               Posso usar o Google Analytics para medir cliques e desempenho. A
               coleta só começa se você aceitar; não uso dados para publicidade.
