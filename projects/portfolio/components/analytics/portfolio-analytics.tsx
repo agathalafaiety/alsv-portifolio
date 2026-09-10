@@ -3,7 +3,8 @@
 import { useCallback, useEffect, useState, useSyncExternalStore } from 'react';
 import type { Metric } from 'web-vitals';
 
-const MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+const MEASUREMENT_ID =
+  process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? 'G-9TYSDTPJQW';
 const CONSENT_STORAGE_KEY = 'agatha-portfolio-analytics-consent';
 const CONSENT_CHANGE_EVENT = 'portfolio-analytics-consent-change';
 

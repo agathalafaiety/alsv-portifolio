@@ -40,6 +40,9 @@ export const metadata: Metadata = {
     'RAG',
     'MLOps',
   ],
+  verification: {
+    google: 'EWPtGuzCmWvcBLyHjDbm2hmq7qwdfC5xecJq7h0o_So',
+  },
   robots: { index: true, follow: true },
   openGraph: {
     type: 'website',
