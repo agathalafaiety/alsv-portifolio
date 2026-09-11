@@ -11,3 +11,7 @@
 - A propriedade de prefixo de URL `https://agathalafaiety.com.br/` foi verificada no Search Console por metatag, e `/sitemap.xml` foi enviado e processado com uma página encontrada.
 - Em 2026-09-09, a propriedade de domínio `sc-domain:agathalafaiety.com.br` foi criada no Search Console e ficou pendente de verificação DNS. O TXT solicitado é `google-site-verification=EWPtGuzCmWvcBLyHjDbm2hmq7qwdfC5xecJq7h0o_So`; a inclusão deve ser coordenada pelo Falcao e preservar todos os registros DNS existentes.
 - Em 2026-09-09, a release `73af1abdbde832897588e2668b89a64f787dd415` foi implantada em produção com o aviso automático de métricas removido; o Analytics fica negado por padrão e o opt-in permanece no controle “Privacidade”. A release `0c070ed9371d7428d4c4dfb6771f908f7e20fa6d` é o rollback comprovado.
+
+## Ambientes de trabalho
+
+- Em 2026-09-11, ficou definido que o Codex trabalha localmente em `C:\Desenvolvimento\alsv`, faz alterações, testes, commit e push, mas não altera a VPS. O agente OpenClaw `alsv` trabalha em `/home/fpripas/.openclaw/workspace-alsv`, mantém seu clone sincronizado pelo Git e coordena qualquer promoção para produção com Falcao. SSH pelo Codex local é permitido somente para inspeção de leitura e comunicação com `alsv`; push não equivale a autorização de deploy.

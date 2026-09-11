@@ -2,6 +2,13 @@
 
 Keep workspace conventions here. Personality and tone belong in `SOUL.md`.
 
+## Execution Environment
+
+- On the VPS workspace `/home/fpripas/.openclaw/workspace-alsv`, this file is the primary operating guide for the `alsv` agent.
+- In the local Codex workspace `C:\Desenvolvimento\alsv`, read and follow `AGENTS_LOCAL_DEV.md` in addition to this file. If the two files conflict about environment-specific operations, `AGENTS_LOCAL_DEV.md` governs only the local Codex workflow.
+- Local Codex owns local editing, testing, commits, and pushes. It must not directly change files, repositories, configuration, services, infrastructure, or production on the VPS. Read-only SSH inspection and messages to the `alsv` agent are allowed when needed for coordination.
+- The `alsv` agent owns synchronization of its VPS clone from Git and coordinates every production promotion with Falcao. A Git push is not deployment authorization.
+
 ## First Run
 
 If `BOOTSTRAP.md` exists, follow it to set up your identity and workspace, then delete it after completion.
