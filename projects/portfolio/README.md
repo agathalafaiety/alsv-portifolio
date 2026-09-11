@@ -115,7 +115,7 @@ O projeto usa HTML semântico, link para pular ao conteúdo, foco visível, cont
 
 ## Publicação e domínio
 
-O código está no repositório `https://github.com/agathalafaiety/alsv.git`, branch `main`, dentro de `projects/portfolio`. A produção é mantida em `/srv/sites/agatha-lafaiety-portfolio`, com releases imutáveis e troca atômica do apontamento `current` coordenadas pelo Falcao, responsável pela infraestrutura compartilhada.
+O código está no repositório `https://github.com/agathalafaiety/alsv-portifolio.git`, branch `main`, dentro de `projects/portfolio`. A produção é mantida em `/srv/sites/agatha-lafaiety-portfolio`, com releases imutáveis e troca atômica do apontamento `current` coordenadas pelo Falcao, responsável pela infraestrutura compartilhada.
 
 O domínio oficial é `https://agathalafaiety.com.br`. Alterações públicas devem ser validadas localmente, versionadas no Git e implantadas pelo fluxo do OpenClaw, sem mudanças diretas em DNS, TLS, Nginx ou serviços compartilhados.
 

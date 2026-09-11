@@ -15,8 +15,8 @@ Este repositório reúne o código do meu portfólio profissional, onde comparti
 ## Como executar localmente
 
 ```bash
-git clone https://github.com/agathalafaiety/alsv.git
-cd alsv/projects/portfolio
+git clone https://github.com/agathalafaiety/alsv-portifolio.git
+cd alsv-portifolio/projects/portfolio
 npm install
 npm run dev -- --port 4317
 ```
