@@ -8,6 +8,7 @@ Keep workspace conventions here. Personality and tone belong in `SOUL.md`.
 - In the local Codex workspace `C:\Desenvolvimento\alsv`, read and follow `AGENTS_LOCAL_DEV.md` in addition to this file. If the two files conflict about environment-specific operations, `AGENTS_LOCAL_DEV.md` governs only the local Codex workflow.
 - Local Codex owns local editing, testing, commits, and pushes. It must not directly change files, repositories, configuration, services, infrastructure, or production on the VPS. Read-only SSH inspection and messages to the `alsv` agent are allowed when needed for coordination.
 - The `alsv` agent owns synchronization of its VPS clone from Git and coordinates every production promotion with Falcao. A Git push is not deployment authorization.
+- OpenClaw-authored workspace content, including memory and dreaming files, belongs in Git and must not be added to `.gitignore`. Before syncing, preserve every non-ignored VPS workspace file with `git add -A` and a descriptive commit; integrate upstream changes without discarding or rewriting either side, push the combined history, and finish with a clean worktree synchronized to its upstream. Stop and report any conflict that cannot be resolved without loss.
 
 ## First Run
 

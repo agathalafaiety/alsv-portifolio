@@ -22,7 +22,8 @@ Estas regras complementam o `AGENTS.md` compartilhado. Elas se aplicam somente a
 - Faça todas as alterações e validações no ambiente local.
 - Use a menor mudança que resolva a tarefa e preserve trabalho existente do usuário ou de outros agentes.
 - Execute os testes, linters, builds ou verificações mais próximos da área alterada. Para mudanças apenas de documentação, execute pelo menos `git diff --check` e revise o diff completo.
-- Não coloque credenciais, tokens, arquivos `.env`, dados privados ou artefatos locais no Git. Use `.gitignore` para exclusões legítimas; não omita manualmente arquivos que deveriam ser rastreados.
+- Não coloque credenciais, tokens, arquivos `.env`, segredos reais ou artefatos locais alheios ao workspace no Git. Use `.gitignore` para exclusões legítimas; não omita manualmente arquivos que deveriam ser rastreados.
+- Não adicione ao `.gitignore` conteúdo de workspace criado pelo OpenClaw, incluindo arquivos de memória e dreaming. Esses arquivos devem ser preservados e versionados; se algum deles contiver uma credencial ou segredo real, interrompa o push e trate o segredo com segurança sem descartar o restante do arquivo.
 - Não use force-push, não reescreva histórico compartilhado e não descarte mudanças desconhecidas.
 
 ## Limite da VPS
