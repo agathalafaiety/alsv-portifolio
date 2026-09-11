@@ -1,14 +1,11 @@
 'use client';
 
-import { useCallback, useEffect, useState, useSyncExternalStore } from 'react';
+import { useEffect } from 'react';
 import type { Metric } from 'web-vitals';
 
 const MEASUREMENT_ID =
   process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? 'G-9TYSDTPJQW';
-const CONSENT_STORAGE_KEY = 'agatha-portfolio-analytics-consent';
-const CONSENT_CHANGE_EVENT = 'portfolio-analytics-consent-change';
 
-type Consent = 'granted' | 'denied';
 type Gtag = (...args: unknown[]) => void;
 
 declare global {
@@ -57,39 +54,12 @@ function sendWebVital(metric: Metric) {
   });
 }
 
-function removeAnalyticsCookies() {
-  const rootDomain = window.location.hostname.replace(/^www\./, '');
-
-  for (const cookie of document.cookie.split(';')) {
-    const name = cookie.split('=')[0]?.trim();
-    if (!name?.startsWith('_ga')) continue;
-
-    document.cookie = `${name}=; Max-Age=0; path=/; SameSite=Lax`;
-    document.cookie = `${name}=; Max-Age=0; path=/; domain=.${rootDomain}; SameSite=Lax`;
-  }
-}
-
-function getConsentSnapshot(): Consent | null {
-  if (typeof window === 'undefined') return null;
-
-  const storedConsent = window.localStorage.getItem(CONSENT_STORAGE_KEY);
-  return storedConsent === 'granted' || storedConsent === 'denied'
-    ? storedConsent
-    : null;
-}
-
-function subscribeToConsent(onStoreChange: () => void) {
-  window.addEventListener('storage', onStoreChange);
-  window.addEventListener(CONSENT_CHANGE_EVENT, onStoreChange);
-
-  return () => {
-    window.removeEventListener('storage', onStoreChange);
-    window.removeEventListener(CONSENT_CHANGE_EVENT, onStoreChange);
-  };
-}
-
 function startAnalytics() {
-  if (!MEASUREMENT_ID || document.querySelector('[data-portfolio-analytics]'))
+  if (
+    process.env.NODE_ENV !== 'production' ||
+    !MEASUREMENT_ID ||
+    document.querySelector('[data-portfolio-analytics]')
+  )
     return;
 
   window.dataLayer = window.dataLayer ?? [];
@@ -99,13 +69,6 @@ function startAnalytics() {
       window.dataLayer?.push(args);
     };
 
-  window.gtag('consent', 'default', {
-    ad_storage: 'denied',
-    ad_user_data: 'denied',
-    ad_personalization: 'denied',
-    analytics_storage: 'denied',
-  });
-  window.gtag('consent', 'update', { analytics_storage: 'granted' });
   window.gtag('js', new Date());
   window.gtag('config', MEASUREMENT_ID, {
     anonymize_ip: true,
@@ -120,17 +83,9 @@ function startAnalytics() {
 }
 
 export function PortfolioAnalytics() {
-  const [preferencesOpen, setPreferencesOpen] = useState(false);
-  const consent = useSyncExternalStore(
-    subscribeToConsent,
-    getConsentSnapshot,
-    () => null,
-  );
-
   useEffect(() => {
-    if (consent !== 'granted') return;
-
     startAnalytics();
+    if (process.env.NODE_ENV !== 'production') return;
 
     const onClick = (event: MouseEvent) => {
       const target = event.target;
@@ -152,68 +107,20 @@ export function PortfolioAnalytics() {
 
     document.addEventListener('click', onClick);
 
+    let cancelled = false;
     void import('web-vitals').then(({ onCLS, onINP, onLCP }) => {
+      if (cancelled) return;
+
       onCLS(sendWebVital);
       onINP(sendWebVital);
       onLCP(sendWebVital);
     });
 
-    return () => document.removeEventListener('click', onClick);
-  }, [consent]);
-
-  const chooseConsent = useCallback((choice: Consent) => {
-    window.localStorage.setItem(CONSENT_STORAGE_KEY, choice);
-    window.dispatchEvent(new Event(CONSENT_CHANGE_EVENT));
-    setPreferencesOpen(false);
-
-    if (choice === 'denied') {
-      window.gtag?.('consent', 'update', { analytics_storage: 'denied' });
-      removeAnalyticsCookies();
-    }
+    return () => {
+      cancelled = true;
+      document.removeEventListener('click', onClick);
+    };
   }, []);
 
-  if (!MEASUREMENT_ID) return null;
-
-  return (
-    <>
-      {preferencesOpen ? (
-        <dialog
-          open
-          className="metrics-consent"
-          aria-labelledby="metrics-consent-title"
-        >
-          <div>
-            <strong id="metrics-consent-title">
-              Preferências de privacidade
-            </strong>
-            <p>
-              Posso usar o Google Analytics para medir cliques e desempenho. A
-              coleta só começa se você aceitar; não uso dados para publicidade.
-            </p>
-          </div>
-          <div className="metrics-consent-actions">
-            <button type="button" onClick={() => chooseConsent('denied')}>
-              Agora não
-            </button>
-            <button
-              type="button"
-              className="accept"
-              onClick={() => chooseConsent('granted')}
-            >
-              Aceitar métricas
-            </button>
-          </div>
-        </dialog>
-      ) : (
-        <button
-          type="button"
-          className="metrics-preferences"
-          onClick={() => setPreferencesOpen(true)}
-          aria-label="Reabrir preferências de métricas"
-        >
-          Privacidade
-        </button>
-      )}
-    </>
-  );
+  return null;
 }
