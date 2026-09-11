@@ -69,9 +69,11 @@ Every few days, use a scheduled automation to review recent daily notes. Fold st
 ## Git Discipline
 
 - Track every file in this workspace that is not excluded by `.gitignore`. Nothing else may be left untracked, unstaged, or uncommitted.
+- Always track OpenClaw-authored workspace files, including `AGENTS.md`, `AGENTS_LOCAL_DEV.md`, `SOUL.md`, `USER.md`, `IDENTITY.md`, `MEMORY.md`, `DREAMS.md`, `dreams.md`, daily notes under `memory/`, and dreaming state or reports under `memory/.dreams/` and `memory/dreaming/`. Never add these files or directories to `.gitignore`.
+- Before starting work that may modify the repository, fetch the configured upstream and verify whether the local branch is behind or divergent. Integrate remote history without rewriting or discarding either side; stop and report any conflict that cannot be resolved without loss.
 - Before ending every turn, run `git add -A`, review the staged changes, create a descriptive commit, and push the current branch to its configured remote.
 - Treat `.gitignore` as the only exclusion policy. Never omit a file manually because it appears incidental, local, or unrelated; add an appropriate `.gitignore` rule first when an exclusion is genuinely required.
-- Verify after pushing that the local branch is synchronized with its upstream and that `git status --short` is empty.
+- Verify after pushing that `HEAD` equals the configured upstream, ahead/behind is `0/0`, and `git status --short` is empty.
 
 ## Existing Solutions Preflight
 
