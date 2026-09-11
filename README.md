@@ -23,10 +23,5 @@ npm run dev -- --port 4317
 
 Depois, acesse `http://localhost:4317` no navegador.
 
-## Contato
-
-[LinkedIn](https://www.linkedin.com/in/agathalafaiety/) · [GitHub](https://github.com/agathalafaiety) · [Medium](https://agathalafaiety.medium.com)
-
 ##
-
 Feito com dedicação por **Agatha Lafaiety**.
