@@ -15,3 +15,4 @@
 ## Ambientes de trabalho
 
 - Em 2026-09-11, ficou definido que o Codex trabalha localmente em `C:\Desenvolvimento\alsv`, faz alterações, testes, commit e push, mas não altera a VPS. O agente OpenClaw `alsv` trabalha em `/home/fpripas/.openclaw/workspace-alsv`, mantém seu clone sincronizado pelo Git e coordena qualquer promoção para produção com Falcao. SSH pelo Codex local é permitido somente para inspeção de leitura e comunicação com `alsv`; push não equivale a autorização de deploy.
+- Os caminhos `DREAMS.md`, `dreams.md`, `memory/.dreams/` e `memory/dreaming/` são artefatos potencialmente sensíveis e regeneráveis do runtime `memory-core/dreaming`; ficam fora do Git. A memória durável canônica continua em `MEMORY.md`.

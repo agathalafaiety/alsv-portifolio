@@ -18,3 +18,9 @@
 **/output/
 **/tmp/
 **/work/
+
+# OpenClaw memory-core runtime artifacts
+/DREAMS.md
+/dreams.md
+/memory/.dreams/
+/memory/dreaming/
