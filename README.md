@@ -27,6 +27,6 @@ Depois, acesse `http://localhost:4317` no navegador.
 
 [LinkedIn](https://www.linkedin.com/in/agathalafaiety/) · [GitHub](https://github.com/agathalafaiety) · [Medium](https://agathalafaiety.medium.com)
 
----
+##
 
 Feito com dedicação por **Agatha Lafaiety**.
