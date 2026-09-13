@@ -552,28 +552,6 @@ button:focus-visible {
   font-weight: 800;
   letter-spacing: 0.1em;
 }
-.scroll-cue {
-  position: absolute;
-  z-index: 3;
-  right: max(var(--page-gutter), calc((100vw - var(--content-max)) / 2));
-  bottom: 1.5rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.55rem;
-  font-size: 0.62rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-.scroll-cue span:last-child {
-  transition: transform 180ms ease;
-}
-.scroll-cue:hover span:last-child,
-.scroll-cue:focus-visible span:last-child {
-  transform: translateY(0.2rem);
-}
-
 .section-dark {
   padding: var(--section-space) 0;
   background: var(--dark-surface);
@@ -1307,9 +1285,6 @@ footer p,
     padding: 1.25rem 0 0;
     border-top: 1px solid var(--line);
     border-left: 0;
-  }
-  .scroll-cue {
-    display: none;
   }
   .about-layout {
     grid-template-columns: 1fr;

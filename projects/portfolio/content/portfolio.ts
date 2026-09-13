@@ -26,7 +26,6 @@ export const copy = {
       'Desenvolvo soluções na intersecção entre Backend, Cloud e Inteligência Artificial.',
     heroPrimary: 'Conheça minha trajetória',
     heroSecondary: 'Enviar e-mail',
-    scroll: 'Descubra minha trajetória',
     aboutTitle: 'Construo tecnologia com clareza e propósito.',
     aboutBody:
       'Transformo desafios de negócio em produtos digitais e soluções de inteligência artificial, do entendimento do problema à implementação em produção. Minha experiência reúne mercado financeiro, projetos internacionais e ambientes que exigem escala, segurança e colaboração.',
@@ -84,7 +83,6 @@ export const copy = {
       'I build solutions at the intersection of Backend, Cloud and Artificial Intelligence.',
     heroPrimary: 'Explore my journey',
     heroSecondary: 'Send an email',
-    scroll: 'Discover my journey',
     aboutTitle: 'I build technology with clarity and purpose.',
     aboutBody:
       'I turn business challenges into digital products and artificial intelligence solutions, from understanding the problem to production implementation. My experience spans financial services, international projects and environments that demand scale, security and collaboration.',

@@ -67,10 +67,6 @@ export function HeroSection({ locale }: { locale: Locale }) {
           </ol>
         </aside>
       </div>
-      <a className="scroll-cue" href="#sobre">
-        <span>{t.scroll}</span>
-        <span aria-hidden="true">↓</span>
-      </a>
     </section>
   );
 }
