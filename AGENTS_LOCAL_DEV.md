@@ -1,11 +1,11 @@
 # AGENTS_LOCAL_DEV.md - Codex Local Development
 
-Estas regras complementam o `AGENTS.md` compartilhado. Elas se aplicam somente ao Codex executado no workspace local `C:\Desenvolvimento\alsv`.
+Estas regras complementam o `AGENTS.md` compartilhado. Elas se aplicam somente ao Codex executado no workspace local `C:\Desenvolvimento\alsv-portifolio`.
 
 ## Identificação e responsabilidades
 
 - Confirme o ambiente pelo caminho real do workspace e pelo sistema operacional; não presuma que está local apenas pelo nome do repositório.
-- No Windows, em `C:\Desenvolvimento\alsv`, atue como o ambiente de desenvolvimento local: leia e edite arquivos locais, execute testes locais e publique mudanças somente no repositório Git remoto.
+- No Windows, em `C:\Desenvolvimento\alsv-portifolio`, atue como o ambiente de desenvolvimento local: leia e edite arquivos locais, execute testes locais e publique mudanças somente no repositório Git remoto.
 - Na VPS, o workspace `/home/fpripas/.openclaw/workspace-alsv` pertence ao agente OpenClaw `alsv`. O Codex local não administra esse workspace.
 - O agente `alsv` é responsável por sincronizar o clone da VPS a partir do Git e por coordenar qualquer promoção para produção com o agente SysOps Falcao (`agentId: main`).
 - Push no Git e deploy em produção são operações distintas. Um push nunca autoriza publicação, reinício de serviço ou alteração de infraestrutura.

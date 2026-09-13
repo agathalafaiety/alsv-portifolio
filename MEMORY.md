@@ -14,5 +14,6 @@
 
 ## Ambientes de trabalho
 
-- Em 2026-09-11, ficou definido que o Codex trabalha localmente em `C:\Desenvolvimento\alsv`, faz alterações, testes, commit e push, mas não altera a VPS. O agente OpenClaw `alsv` trabalha em `/home/fpripas/.openclaw/workspace-alsv`, mantém seu clone sincronizado pelo Git e coordena qualquer promoção para produção com Falcao. SSH pelo Codex local é permitido somente para inspeção de leitura e comunicação com `alsv`; push não equivale a autorização de deploy.
+- Em 2026-09-11, ficou definido que o Codex trabalha no clone local do projeto, faz alterações, testes, commit e push, mas não altera a VPS. O agente OpenClaw `alsv` trabalha em `/home/fpripas/.openclaw/workspace-alsv`, mantém seu clone sincronizado pelo Git e coordena qualquer promoção para produção com Falcao. SSH pelo Codex local é permitido somente para inspeção de leitura e comunicação com `alsv`; push não equivale a autorização de deploy.
+- Em 2026-09-13, o clone local foi renomeado para `C:\Desenvolvimento\alsv-portifolio`, acompanhando o nome do repositório GitHub `agathalafaiety/alsv-portifolio`; o nome e o caminho operacional do agente OpenClaw `alsv` permaneceram inalterados.
 - Em 2026-09-11, Agatha determinou que conteúdo de workspace criado pelo OpenClaw, incluindo `DREAMS.md`, `dreams.md`, `memory/.dreams/` e `memory/dreaming/`, deve ser preservado no Git e nunca incluído no `.gitignore`. Todo arquivo não ignorado deve passar por `git add -A`, commit e push; a integração entre os ambientes deve terminar sem perda e com ambos os worktrees limpos.
