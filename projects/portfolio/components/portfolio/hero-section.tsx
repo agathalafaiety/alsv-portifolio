@@ -15,6 +15,7 @@ export function HeroSection({ locale }: { locale: Locale }) {
         <div className="hero-copy">
           <h1 id="hero-title">
             <span>{t.heroTitleA}</span>
+            {' '}
             <strong>{t.heroTitleB}</strong>
           </h1>
           <p className="hero-role">{t.heroLabel}</p>
