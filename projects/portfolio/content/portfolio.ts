@@ -201,10 +201,7 @@ export const experiences = [
 
 export const toolGroups = [
   {
-    title: {
-      pt: 'IA Generativa & LLMs',
-      en: 'Generative AI & LLMs',
-    },
+    title: { pt: 'IA Generativa & LLMs', en: 'Generative AI & LLMs' },
     items: [
       'LLMs',
       'OpenAI API',
@@ -217,32 +214,29 @@ export const toolGroups = [
     ],
   },
   {
-    title: { pt: 'Machine Learning & MLOps', en: 'Machine Learning & MLOps' },
+    title: { pt: 'Backend & Engenharia', en: 'Backend & Engineering' },
     items: [
-      'Machine Learning',
-      'Scikit-learn',
-      'MLflow',
-      'MLOps',
-      'Databricks',
-      'Docker',
-      'CI/CD',
-      'Azure',
+      'Python',
+      'FastAPI',
+      'Flask',
+      'REST APIs',
+      'SQL',
+      'PySpark',
+      'Microservices',
+      'BFF',
     ],
   },
   {
-    title: {
-      pt: 'Python & Engenharia de Dados',
-      en: 'Python & Data Engineering',
-    },
+    title: { pt: 'Cloud & MLOps', en: 'Cloud & MLOps' },
     items: [
-      'Python',
-      'PySpark',
-      'Apache Spark',
-      'SQL',
-      'PostgreSQL',
-      'SQL Server',
-      'Chroma DB',
-      'PowerDesigner',
+      'AWS',
+      'Azure',
+      'MLOps',
+      'Databricks',
+      'Docker',
+      'Git',
+      'CI/CD',
+      'Splunk',
     ],
   },
   {
@@ -251,14 +245,14 @@ export const toolGroups = [
       en: 'Data Science & Analytics',
     },
     items: [
+      'PostgreSQL',
+      'SQL Server',
       'Pandas',
       'NumPy',
-      'Jupyter',
-      'Matplotlib',
-      'Seaborn',
+      'Chroma DB',
+      'PowerDesigner',
       'Power BI',
       'Looker Studio',
-      'Splunk',
     ],
   },
 ] as const satisfies readonly ToolGroup[];
