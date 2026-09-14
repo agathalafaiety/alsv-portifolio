@@ -676,10 +676,25 @@ button:focus-visible {
 .tool-group ul {
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-flow: dense;
   gap: 0.55rem;
   list-style: none;
+}
+.tool-group li {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  white-space: nowrap;
+}
+.tool-group:nth-child(1) li:nth-child(7),
+.tool-group:nth-child(2) li:last-child,
+.tool-group:nth-child(3) li:last-child,
+.tool-group:nth-child(4) li:nth-child(6) {
+  grid-column: 1 / -1;
 }
 .tool-group li,
 .tag-list span,
