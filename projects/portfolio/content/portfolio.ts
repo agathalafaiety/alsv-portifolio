@@ -210,7 +210,8 @@ export const toolGroups = [
       'LangChain',
       'Fine-Tuning',
       'Prompt Engineering',
-      'Context Engineering',
+      'AI Agents',
+      'OpenClaw',
     ],
   },
   {
@@ -224,6 +225,7 @@ export const toolGroups = [
       'PySpark',
       'Microservices',
       'BFF',
+      'Apache Airflow',
     ],
   },
   {
@@ -231,6 +233,7 @@ export const toolGroups = [
     items: [
       'AWS',
       'Azure',
+      'GCP',
       'MLOps',
       'Databricks',
       'Docker',
@@ -250,6 +253,7 @@ export const toolGroups = [
       'Pandas',
       'NumPy',
       'Chroma DB',
+      'Vector Databases',
       'PowerDesigner',
       'Power BI',
       'Looker Studio',
