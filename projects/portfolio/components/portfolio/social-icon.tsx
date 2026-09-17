@@ -1,4 +1,4 @@
-import { BookOpen, ExternalLink, Share2 } from 'lucide-react';
+import { BookOpen, ExternalLink } from 'lucide-react';
 
 type SocialIconProps = {
   label: string;
@@ -56,10 +56,6 @@ export function SocialIcon({ label, size = 20 }: SocialIconProps) {
 
   if (label === 'Medium') {
     return <BookOpen aria-hidden="true" size={size} strokeWidth={1.7} />;
-  }
-
-  if (label === 'Linktree') {
-    return <Share2 aria-hidden="true" size={size} strokeWidth={1.7} />;
   }
 
   return <ExternalLink aria-hidden="true" size={size} strokeWidth={1.7} />;

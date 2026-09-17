@@ -52,8 +52,7 @@ export type SocialLabel =
   | 'GitHub'
   | 'Medium'
   | 'Instagram'
-  | 'YouTube'
-  | 'Linktree';
+  | 'YouTube';
 
 export type SocialLink = Readonly<{
   label: SocialLabel;
