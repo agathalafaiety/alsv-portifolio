@@ -321,7 +321,6 @@ export const talkTags = [
   { pt: 'LLMs', en: 'LLMs' },
   { pt: 'RAG', en: 'RAG' },
   { pt: 'Prompt Engineering', en: 'Prompt Engineering' },
-  { pt: 'Uso responsável', en: 'Responsible use' },
 ] as const;
 
 export const volunteerWork = [
