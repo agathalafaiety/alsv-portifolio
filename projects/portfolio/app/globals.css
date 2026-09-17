@@ -1126,6 +1126,17 @@ button:focus-visible {
 }
 .social-grid a:last-child:nth-child(odd) {
   grid-column: 1 / -1;
+  grid-template-columns: 1fr auto auto 1fr;
+}
+.social-grid a:last-child:nth-child(odd) > svg:first-child {
+  grid-column: 2;
+}
+.social-grid a:last-child:nth-child(odd) > span {
+  grid-column: 3;
+}
+.social-grid a:last-child:nth-child(odd) > svg:last-child {
+  grid-column: 4;
+  justify-self: end;
 }
 
 .contact-section {

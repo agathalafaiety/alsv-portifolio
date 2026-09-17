@@ -20,7 +20,6 @@ export const EXTERNAL_LINKS = {
   medium: 'https://agathalafaiety.medium.com',
   instagram: 'https://www.instagram.com/agathalafaiety/',
   youtube: 'https://www.youtube.com/@agathalafaiety',
-  linktree: 'https://linktr.ee/agathalafaiety',
 } as const;
 
 export const SOCIAL_LINKS = [
@@ -29,7 +28,6 @@ export const SOCIAL_LINKS = [
   { label: 'Medium', href: EXTERNAL_LINKS.medium },
   { label: 'Instagram', href: EXTERNAL_LINKS.instagram },
   { label: 'YouTube', href: EXTERNAL_LINKS.youtube },
-  { label: 'Linktree', href: EXTERNAL_LINKS.linktree },
 ] as const satisfies readonly SocialLink[];
 
 export const PUBLIC_ASSETS = {
